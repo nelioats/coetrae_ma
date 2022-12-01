@@ -1,0 +1,2 @@
+<h1>COETRAE - MA</h1>
+<p>A Comissão Estadual para Erradicação do Trabalho Escravo no Maranhão (COETRAE/MA) foi criada pelo Decreto Estadual de nº 22.996 de 20 de março de 2007 e presidida pela então Secretaria de Estado dos Direitos Humanos, Assistência Social e Cidadania. Trata-se de uma instância paritária de articulação de políticas públicas voltadas para a erradicação do trabalho escravo, sendo composta por representantes de órgãos governamentais, do Poder Judiciário e da sociedade civil organizada.</p>
