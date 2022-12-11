@@ -2893,7 +2893,7 @@ pre {
   }
   .row{
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     align-items: center;
   }
