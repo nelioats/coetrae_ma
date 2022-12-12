@@ -213,11 +213,11 @@
        <div class="login-area page-padding" style="padding-top: 70px">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     
 
 
-                    <div class="row">
+                    <div class="row text-center">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="feature-content">
                                 <div class="feature-images">
@@ -227,7 +227,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="feature-text" style="margin-top: 10px;">
-                                <h4>GUIA RÁPIDO PARA JORNALISTAS SOBRE TRABALHO ESCRAVO</h4>
+                                <h4 class="text-center">GUIA RÁPIDO PARA JORNALISTAS SOBRE TRABALHO ESCRAVO</h4>
                                            
                                 <a class="feature-btn" href="https://reporterbrasil.org.br/guia/" target="_blank">Ir para Guia</a>
                             </div>
@@ -238,93 +238,139 @@
 
                     <!-- ==================================================================== -->
 
-                    <div class="row" style="margin-top: 30px;">
+                    <div class="row" style="margin-top: 30px; margin-bottom: 10px;">
 
 
               
 
                          
-                          <h6 style="background-color: rgb(216, 216, 216); padding: 20px;">Pesquisar</h6>
+                          <h6 style="background-color: rgb(216, 216, 216); padding: 20px; margin-bottom: 35px;margin-top: 35px;" class="text-center">Pesquisar</h6>
 
 
 
-                                <div class="form-group mt-1 info-item col-md-3">
-                                    <label>
-                                        <h6 style=" font-weight: bold">base:</h6>
+                                <div class="form-group mt-1 info-item col-md-6">
+                                   <label for="">
+                                        <h6 style=" font-weight: bold">Nome da(o) responsável pelo preenchimentos dos dados:</h6>
                                     </label>
-                                    <select class="form-control" name="base">
-                                        <option></option>
-                                    </select>
+                                    <input type="text" class="form-control" name="resumo" value="">
                                 </div>
 
-                                <div class="form-group mt-1 info-item col-md-3">
-                                    <label>
-                                        <h6 style=" font-weight: bold">curso:</h6>
-                                    </label>
-                                    <select class="form-control" name="curso">
-                                        <option value=""></option>
-                                    </select>
-                                </div>
+                                <div class="form-group mt-1 info-item col-md-6">
+                                    <label for="">
+                                         <h6 style=" font-weight: bold">Função da(o) responsável pelo preenchimentos dos dados:</h6>
+                                     </label>
+                                     <input type="text" class="form-control" name="resumo" value="">
+                                 </div>
 
-                                <div class="form-group mt-1 info-item col-md-3">
-                                    <label>
-                                        <h6 style=" font-weight: bold">componente BNCC:</h6>
-                                    </label>
-                                    <select class="form-control" name="componenteBNCC">
-                                        <option value=""></option>
-                                    </select>
-                                </div>
+                                 <div class="form-group mt-1 info-item col-md-4">
+                                    <label for="">
+                                         <h6 style=" font-weight: bold">Organização:</h6>
+                                     </label>
+                                     <input type="text" class="form-control" name="resumo" value="">
+                                 </div>
 
-                                <div class="form-group mt-1 info-item col-md-3">
+                                <div class="form-group mt-1 info-item col-md-4">
                                     <label>
-                                        <h6 style=" font-weight: bold">componente BT:</h6>
+                                        <h6 style=" font-weight: bold">Tipo de Material:</h6>
                                     </label>
                                     <select class="form-control" name="componenteBT">
-                                        <option value=""></option>
+                                        <option value="">Monografias</option>
+                                        <option value="">Teses Diversas</option>
+                                        <option value="">Livros</option>
+                                        <option value="">Artigos</option>
+                                        <option value="">Outros</option>
                                     </select>
                                 </div>
 
-                                <div class="form-group mt-0 info-item col-md-3">
-                                    <label>
-                                        <h6 style=" font-weight: bold">série:</h6>
-                                    </label>
-                                    <select class="form-control" name="serie">
-                                        <option value=""></option>
-                                        <option value="1ª">1ª</option>
-                                        <option value="2ª">2ª</option>
-                                        <option value="3ª">3ª</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group mt-0 info-item col-md-3">
+                                <div class="form-group mt-1 info-item col-md-4">
                                     <label for="">
-                                        <h6 style=" font-weight: bold">autores:</h6>
-                                    </label>
-                                    <input type="text" class="form-control text" name="autores"
-                                        value="">
-                                </div>
+                                         <h6 style=" font-weight: bold">Título:</h6>
+                                     </label>
+                                     <input type="text" class="form-control" name="resumo" value="">
+                                 </div>
 
-                                <div class="form-group mt-0 info-item col-md-3">
+                                 <div class="form-group mt-1 info-item col-md-4">
                                     <label for="">
-                                        <h6 style=" font-weight: bold">orientadores:</h6>
+                                         <h6 style=" font-weight: bold">Resumo:</h6>
+                                     </label>
+                                     <input type="text" class="form-control" name="resumo" value="">
+                                 </div>
+
+                                 <div class="form-group mt-1 info-item col-md-4">
+                                    <label for="">
+                                         <h6 style=" font-weight: bold">Autores:</h6>
+                                     </label>
+                                     <input type="text" class="form-control" name="resumo" value="">
+                                 </div>
+
+
+                                <div class="form-group mt-0 info-item col-md-4">
+                                    <label for="">
+                                        <h6 style=" font-weight: bold">Orientadores:</h6>
                                     </label>
                                     <input type="text" class="form-control" name="orientadores"
                                         value="">
                                 </div>
 
-                                <div class="form-group mt-0 info-item col-md-3">
+                                <div class="form-group mt-0 info-item col-md-4">
                                     <label for="">
-                                        <h6 style=" font-weight: bold">Pesquise pelo título:</h6>
+                                        <h6 style=" font-weight: bold">Data de Publicação:</h6>
                                     </label>
-                                    <input type="text" class="form-control" name="titulo" value="">
+                                    <input type="date" class="form-control" name="orientadores"
+                                        value="">
                                 </div>
 
-                                <div class="form-group mt-0 info-item col-md-12">
-                                    <label for="">
-                                        <h6 style=" font-weight: bold">resumo:</h6>
+                                <div class="form-group mt-1 info-item col-md-8">
+                                    <label>
+                                        <h6 style=" font-weight: bold; text-align: left;">Com quem? Parcerias:</h6>
                                     </label>
-                                    <input type="text" class="form-control" name="resumo" value="">
+                                    <select class="form-control" name="componenteBT">
+                                        <option value="">AGERP - Agência Estadual de Pesquisa Agropecuária e Extensão Rural do Maranhão</option>
+<option value="">CCN - Centro de Cultura Negra do Maranhão</option>
+<option value="">CDVDH/CB - Centro de Defesa da Vida e dos Direitos Humano Carmen Bascarán</option>
+<option value="">CEREST/MA - Centro de Referência em Saúde do Trabalhador</option>
+<option value="">DPE/MA - Defensoria Pública do Estado do Maranhão</option>
+<option value="">CPT - Comissão Pastoral da Terra</option>
+<option value="">DPU/MA - Defensoria Pública da União no Maranhão</option>
+<option value="">FETAEMA - Federação dos Trabalhadores da Agricultura/MA</option>
+<option value="">IMESC - Instituto Maranhense de Estudos Socioeconômicos e Cartográficos</option>
+<option value="">ITERMA - INSTITUTO DE COLONIZAÇÃO E TERRAS DO MARANHÃO</option>
+<option value="">MPE - Ministério Público do Estado do Maranhão</option>
+<option value="">MPF - Ministério Publico Federal do Maranhão</option>
+<option value="">OAB/MA - Ordem dos Advogados do Brasil no Maranhão</option>
+<option value="">PF/MA - POLÍCIA FEDERAL</option>
+<option value="">Procuradoria da República no Maranhão</option>
+<option value="">Procuradoria Regional do Trabalho - PRT 16ª Região</option>
+<option value="">Procuradoria-Geral de Justiça - PGJ</option>
+<option value="">SAF - Secretaria De Estado Da Agricultura Familiar</option>
+<option value="">SAGRIMA - Secretaria de Agricultura, Pecuária e Pesca do Estado do Maranhão</option>
+<option value="">SECAP - Secretaria de Estado da Comunicação Social</option>
+<option value="">SECMA - Secretaria de Estado da Cultura</option>
+<option value="">SECTI - Secretaria de Ciência, Tecnologia e Inovação</option>
+<option value="">SECULT Secretaria Municipal de Cultura</option>
+<option value="">SEDEPE - Secretaria de Estado de Desenvolvimento Econômico e Programas Estratégicos</option>
+<option value="">SEDES - Secretaria Estadual de Desenvolvimento Social</option>
+<option value="">SEDIHPOP - Secretaria de Estado dos Direitos Humanos e Participação Popular</option>
+<option value="">SEDUC - Secretaria de Estado de Educação</option>
+<option value="">SEEJUV - Secretaria De Estado Extraordinária Da Juventude</option>
+<option value="">SEGOV - Secretaria de Governo do Maranhão</option>
+<option value="">SEIR - Secretaria de Estado da Igualdade Racial</option>
+<option value="">SEMA - Secretaria de Estado do Meio Ambiente e Recursos Naturais</option>
+<option value="">SEPLAN - Secretaria de Estado do Planejamento e Orçamento</option>
+<option value="">SES - Secretaria de Estado da Saúde</option>
+<option value="">SETRES - Secretaria de Estado do Trabalho e da Economia Solidar</option>
+<option value="">SETUR - Secretaria Municipal de Turismo</option>
+<option value="">SMDH - Sociedade Maranhense de Direitos Humanos</option>
+<option value="">SRTb/MA - Superintendência Regional do Trabalho e Emprego no Maranhão</option>
+<option value="">SSP/MA - Secretaria de Segurança Pública do Estado do Maranhão</option>
+<option value="">TRT - Tribunal Regional do Trabalho da 16ª Região</option>
+<option value="">UFMA - Universidade Federal do Maranhão</option>
+<option value="">VIVA PROCON</option>
+<option value="">Outro:</option>
+
+                                    </select>
                                 </div>
+                       
 
                           
 
