@@ -514,7 +514,7 @@ CalendarApp.prototype.inputChangeLimiter = function (ele) {
     clearTimeout(timeOut);
   }
 
-  var limiter = CalendarApp.prototype.textOptionLimiter;
+  // var limiter = CalendarApp.prototype.textOptionLimiter;
 
   var _options = ele.getAttribute("data-options").split(",");
   var _format = ele.getAttribute("data-format") || "text";
@@ -523,59 +523,59 @@ CalendarApp.prototype.inputChangeLimiter = function (ele) {
   }, 600);
   activeEle = ele;
 };
-CalendarApp.prototype.textOptionLimiter = function (options, input, format) {
-  if (!input) return "";
+// CalendarApp.prototype.textOptionLimiter = function (options, input, format) {
+//   if (!input) return "";
 
-  if (input.indexOf(":") !== -1 && format == "datetime") {
-    var _splitTime = input.split(":", 2);
-    if (_splitTime.length == 2 && !_splitTime[1].trim()) return input;
-    var _trailingTime = parseInt(_splitTime[1]);
-    /* Probably could be coded better -- a block to clean up trailing data */
-    if (options.indexOf(_splitTime[0]) === -1) {
-      return options[0];
-    } else if (_splitTime[1] == "0") {
-      return input;
-    } else if (_splitTime[1] == "00") {
-      return _splitTime[0] + ":00";
-    } else if (_trailingTime < 10) {
-      return _splitTime[0] + ":" + "0" + _trailingTime;
-    } else if (
-      !Number.isInteger(_trailingTime) ||
-      _trailingTime < 0 ||
-      _trailingTime > 59
-    ) {
-      return _splitTime[0];
-    }
-    return _splitTime[0] + ":" + _trailingTime;
-  }
-  if (input.toString().length >= 3) {
-    var pad = (input.toString().length - 4) * -1;
-    var _hour, _min;
-    if (pad == 1) {
-      _hour = input[0];
-      _min = input[1] + input[2];
-    } else {
-      _hour = input[0] + input[1];
-      _min = input[2] + input[3];
-    }
+//   if (input.indexOf(":") !== -1 && format == "datetime") {
+//     var _splitTime = input.split(":", 2);
+//     if (_splitTime.length == 2 && !_splitTime[1].trim()) return input;
+//     var _trailingTime = parseInt(_splitTime[1]);
+//     /* Probably could be coded better -- a block to clean up trailing data */
+//     if (options.indexOf(_splitTime[0]) === -1) {
+//       return options[0];
+//     } else if (_splitTime[1] == "0") {
+//       return input;
+//     } else if (_splitTime[1] == "00") {
+//       return _splitTime[0] + ":00";
+//     } else if (_trailingTime < 10) {
+//       return _splitTime[0] + ":" + "0" + _trailingTime;
+//     } else if (
+//       !Number.isInteger(_trailingTime) ||
+//       _trailingTime < 0 ||
+//       _trailingTime > 59
+//     ) {
+//       return _splitTime[0];
+//     }
+//     return _splitTime[0] + ":" + _trailingTime;
+//   }
+//   if (input.toString().length >= 3) {
+//     var pad = (input.toString().length - 4) * -1;
+//     var _hour, _min;
+//     if (pad == 1) {
+//       _hour = input[0];
+//       _min = input[1] + input[2];
+//     } else {
+//       _hour = input[0] + input[1];
+//       _min = input[2] + input[3];
+//     }
 
-    _hour = Math.max(1, Math.min(12, _hour));
-    _min = Math.min(59, _min);
-    if (_min < 10) {
-      _min = "0" + _min;
-    }
-    _min = isNaN(_min) ? "00" : _min;
-    _hour = isNaN(_hour) ? "9" : _hour;
+//     _hour = Math.max(1, Math.min(12, _hour));
+//     _min = Math.min(59, _min);
+//     if (_min < 10) {
+//       _min = "0" + _min;
+//     }
+//     _min = isNaN(_min) ? "00" : _min;
+//     _hour = isNaN(_hour) ? "9" : _hour;
 
-    return _hour + ":" + _min;
-  }
+//     return _hour + ":" + _min;
+//   }
 
-  if (options.indexOf(input) === -1) {
-    return options[0];
-  }
+//   if (options.indexOf(input) === -1) {
+//     return options[0];
+//   }
 
-  return input;
-};
+//   return input;
+// };
 CalendarApp.prototype.resetAddEventBox = function () {
   this.dayEventAddForm.nameEvent.value = "";
   this.dayEventAddForm.nameEvent.classList.remove("add-event-edit--error");
