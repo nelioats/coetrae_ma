@@ -76,6 +76,16 @@ function CalendarApp(date) {
     cancelBtn: document.getElementById("add-event-cancel"),
     addBtn: document.getElementById("add-event-save"),
     nameEvent: document.getElementById("input-add-event-name"),
+
+    // testando
+    organizadoresEvent: document.getElementById(
+      "input-add-event-organizadores"
+    ),
+    localEvent: document.getElementById("input-add-event-local"),
+    linkEvent: document.getElementById("input-add-event-link"),
+
+    //testando fim
+
     startTime: document.getElementById("input-add-event-start-time"),
     endTime: document.getElementById("input-add-event-end-time"),
     startAMPM: document.getElementById("input-add-event-start-ampm"),
@@ -296,7 +306,22 @@ CalendarApp.prototype.showEventsCreateElesView = function (events) {
         : "") +
       "</span>";
 
-    html += "<span class='event-name'>" + event.name + "</span>";
+    html +=
+      "<span class='event-name'>" +
+      "Evento: " +
+      event.name +
+      "<br/>" +
+      "Organizadores: " +
+      event.organizadores +
+      "<br/>" +
+      "Local: " +
+      event.local +
+      "<br/>" +
+      "Link Card: " +
+      "<a href=" +
+      event.link +
+      " target='_blank'>Clique para acessar</a>" +
+      "</span>";
 
     var div = document.createElement("div");
     div.className = "event-dates";
@@ -395,12 +420,24 @@ CalendarApp.prototype.saveAddNewEvent = function () {
 
 CalendarApp.prototype.addEvent = function () {
   var name = this.dayEventAddForm.nameEvent.value.trim();
+  //testando
+  var organizadores = this.dayEventAddForm.organizadoresEvent.value.trim();
+  var local = this.dayEventAddForm.localEvent.value.trim();
+  var link = this.dayEventAddForm.linkEvent.value.trim();
+
+  //testando
+
   var dayOfDate = this.dayEventBoxEle.getAttribute("data-date");
   var dateObjectDay = new Date(dayOfDate);
   var cleanDates = this.cleanEventTimeStampDates();
 
   this.apts.push({
     name: name,
+    //testando
+    organizadores: organizadores,
+    local: local,
+    link: link,
+    //testando
     day: dateObjectDay,
     startTime: cleanDates[0],
     endTime: cleanDates[1],
@@ -482,6 +519,14 @@ CalendarApp.prototype.cleanEventTimeStampDates = function () {
 CalendarApp.prototype.validateAddEventInput = function () {
   var _errors = false;
   var name = this.dayEventAddForm.nameEvent.value.trim();
+
+  //testando
+
+  var organizadores = this.dayEventAddForm.organizadoresEvent.value.trim();
+  var local = this.dayEventAddForm.localEvent.value.trim();
+  var link = this.dayEventAddForm.linkEvent.value.trim();
+  //testando fim
+
   var startTime = this.dayEventAddForm.startTime.value.trim();
   var startAMPM = this.dayEventAddForm.startAMPM.value.trim();
   var endTime = this.dayEventAddForm.endTime.value.trim();
@@ -490,9 +535,30 @@ CalendarApp.prototype.validateAddEventInput = function () {
   if (!name || name == null) {
     _errors = true;
     this.dayEventAddForm.nameEvent.classList.add("add-event-edit--error");
+    //testando
+    this.dayEventAddForm.organizadoresEvent.classList.add(
+      "add-event-edit--error"
+    );
+    this.dayEventAddForm.localEvent.classList.add("add-event-edit--error");
+    this.dayEventAddForm.linkEvent.classList.add("add-event-edit--error");
+    //testando fim
     this.dayEventAddForm.nameEvent.focus();
+
+    //testando
+    this.dayEventAddForm.organizadoresEvent.focus();
+    this.dayEventAddForm.localEvent.focus();
+    this.dayEventAddForm.linkEvent.focus();
+    //testando fim
   } else {
     this.dayEventAddForm.nameEvent.classList.remove("add-event-edit--error");
+
+    //testando
+    this.dayEventAddForm.organizadoresEvent.classList.remove(
+      "add-event-edit--error"
+    );
+    this.dayEventAddForm.localEvent.classList.remove("add-event-edit--error");
+    this.dayEventAddForm.linkEvent.classList.remove("add-event-edit--error");
+    //fim testando
   }
 
   //   if (!startTime || startTime == null) {
@@ -579,6 +645,21 @@ CalendarApp.prototype.inputChangeLimiter = function (ele) {
 CalendarApp.prototype.resetAddEventBox = function () {
   this.dayEventAddForm.nameEvent.value = "";
   this.dayEventAddForm.nameEvent.classList.remove("add-event-edit--error");
+
+  //testando
+  this.dayEventAddForm.organizadoresEvent.value = "";
+  this.dayEventAddForm.organizadoresEvent.classList.remove(
+    "add-event-edit--error"
+  );
+
+  this.dayEventAddForm.localEvent.value = "";
+  this.dayEventAddForm.localEvent.classList.remove("add-event-edit--error");
+
+  this.dayEventAddForm.linkEvent.value = "";
+  this.dayEventAddForm.linkEvent.classList.remove("add-event-edit--error");
+
+  //testando fim
+
   this.dayEventAddForm.endTime.value = "";
   this.dayEventAddForm.startTime.value = "";
   this.dayEventAddForm.endAMPM.value = "";

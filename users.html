@@ -4,7 +4,7 @@
 <head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>COETRAE/MA - Login</title>
+		<title>COETRAE/MA - Usuários</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -106,9 +106,9 @@
                                                             <li><a href="guia-para-jornalistas.html">ASCOM's</a></li>
                                                         </ul>
                                                 </li>
-                                                <li>  
+                                                <!-- <li>  
                                                     <a href="login.html" class="s-menu-novo">Login</a></li>                                                       
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -171,9 +171,9 @@
                                                     <li><a href="guia-para-jornalistas.html">ASCOM's</a></li>
                                                 </ul>
                                         </li>
-                                        <li>  
+                                        <!-- <li>  
                                             <a href="login.html" class="s-menu-novo">Login</a></li>                                                       
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </nav>
 
@@ -193,11 +193,11 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="breadcrumb text-center">
                             <div class="section-headline white-headline">
-                                <h3>Login</h3>
+                                <h3>Usuários</h3>
                             </div>
                             <ul class="breadcrumb-bg">
                                 <li class="home-bread">Home</li>
-                                <li>Login</li>
+                                <li>Controle de usuários</li>
                             </ul>
                         </div>
                     </div>
@@ -211,68 +211,56 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
 
-                        <div class="login-page" id="blocoLogin" >
-                            <div class="login-form">
-                                <h4 class="login-title">LOGIN</h4>
-                                <div class="row">
-                                    <div  class="log-form">
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="email" id="emailLogin" class="form-control" placeholder="E-mail" required data-error="Please enter your name">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="password" id="passLogin" class="form-control" placeholder="Senha" required data-error="Please enter your message subject">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <div class="check-group flexbox">
-                                                <label class="check-box">
-                                                    <input type="checkbox" class="check-box-input">
-                                                    <span class="remember-text">Lembrar-me</span>
-                                                </label>
+                                   
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col" >#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Perfil</th>
+                                <th scope="col" class="text-center">Atualizar</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                        
 
-                                                <a class="text-muted" href="#">Esqueceu senha?</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <button id="botaoLogin"  class="login-btn" onclick="logar()">Login</button>
-                                            
-                                            <p style="margin-top: 26px;">Não tem conta?<span style="color: rgb(88, 136, 224); cursor: pointer;" onclick="apresentaRegistro()"> Clique aqui</span></p>
-                                            
-                                        </div>
-                                         
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Belisa Teixeira Souza</td>
+                                <td>belisateu@gmail.com</td>
+                                <td>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Usuário</option>
+                                        <option value="" selected>Ascom</option>
+                                        <option value="">Administrador</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <button style="padding: 5px 15px 5px 15px; color: white; background-color: #2E84E6; margin: 0; border: 0;">Atualizar</button>
+                                </td>
+                              </tr>
 
-                        <div  id="blocoRegistro" hidden>
-                            <div class="login-form">
-                                <h4 class="login-title">Registrar</h4>
-                                <div class="row">
-                                    <div   class="log-form">
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="text" id="name" class="form-control" placeholder="Nome completo" required data-error="Please enter your name">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="email" id="name" class="form-control" placeholder="E-mail" required data-error="Please enter your name">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="password" id="msg_subject" class="form-control" placeholder="Senha" required data-error="Please enter your message subject">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="password" id="msg_subject" class="form-control" placeholder="Confirmação de Senha" required data-error="Please enter your message subject">
-                                        </div>
-                                     
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <button type="submit" id="submit" class="login-btn">Salvar</button>
-                                            
-                                            <p style="margin-top: 26px;">Já tem uma conta?<span style="color: rgb(88, 136, 224); cursor: pointer;" onclick="apresentaLogin()"> Clique aqui</span></p>
-                                            
-                                        </div>
-                                         
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Vinicius de Almeda filho</td>
+                                <td>vinifi02@gmail.com</td>
+                                <td>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Usuário</option>
+                                        <option value="">Ascom</option>
+                                        <option value="" selected>Administrador</option>
+                                    </select>
+                                </td>
+                                <td class="text-center">
+                                    <button style="padding: 5px 15px 5px 15px; color: white; background-color: #2E84E6; margin: 0; border: 0;">Atualizar</button>
+                                </td>
+                              </tr>
+
+
+                            </tbody>
+                    </table>
+    
 
                     </div>
                 </div>
